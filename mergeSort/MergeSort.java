@@ -4,7 +4,6 @@ package mergeSort;
  * Class: MergeSort.java
  * @author JJ Lindsay
  * @version 1.0
- * Course: Preparing for 2015 Internship 
  * Written: Jan 23, 2015
  *
  * This class represents a merge sort which is quite efficient and operates at an O(nlogn)
@@ -15,7 +14,7 @@ package mergeSort;
 public class MergeSort
 {
 
-	public static void mergeSort(int[] list)
+	public static void mergeSort(int[] list)  //Notice how changing a list provides NO return value to the caller
 	{
 		if (list.length>1) // this is the breaking point/stopping point
 		{
@@ -40,8 +39,7 @@ public class MergeSort
 	
 	public static void merge(int[] first, int[] second, int[] temp)
 	{
-		//how do you merge two elements into one array
-		//
+		
 		int count = 0;  //index for the temp list
 		int countFirst = 0;  //index for the first half
 		int countSecond = 0;  //index for the second half list
@@ -85,6 +83,7 @@ public class MergeSort
 	 */
 	public static void main(String[] args)
 	{
+		//A list to demonstrate merge sort in action
 		int[] list = {2, 3, 2, 5, 6, 1, -2, 3, 14, 12};
 		mergeSort(list);
 		for (int i = 0; i < list.length; i++)
